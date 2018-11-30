@@ -39,6 +39,7 @@ class AutoUpdater extends Updater {
 		autoUpdater.on( 'update-downloaded', this.onDownloaded.bind( this ) );
 
 		autoUpdater.autoInstallOnAppQuit = false;
+		autoUpdater.allowDowngrade = true;
 
 		if ( this.beta ) {
 			autoUpdater.allowPrerelease = true;
